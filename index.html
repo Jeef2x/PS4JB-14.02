@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>PS4 14.00/14.02 webkit jb</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">
+    <h1>PS4 14.00/14.02 webkit jb</h1>
+    <p class="sub">browser/WebKit chain &mdash; live progress</p>
+  </div>
+  <div class="status">
+    <span id="pill" class="pill is-idle">starting</span>
+    <div class="meta">
+      <span class="meta-item"><span class="k">session</span> <b id="session">&mdash;</b></span>
+      <span class="meta-item"><span class="k">age</span> <b id="age">00:00</b></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="card jb-card">
+    <div class="jb-row">
+      <div class="jb-item">
+        <button id="jb" class="jb-button" type="button">Jailbreak</button>
+        <p id="jb-hint" class="jb-hint">GoldHEN v2.4b18.13 &mdash; latest version by SiSTRo</p>
+      </div>
+      <div class="jb-item">
+        <button id="jb-hen" class="jb-button is-hen" type="button">ps4-hen</button>
+        <p id="jb-hen-hint" class="jb-hint">ps4-hen 2.2.0 &mdash; alternative payload</p>
+      </div>
+      <div class="jb-item">
+        <button id="jb-linux" class="jb-button is-linux" type="button">Linux</button>
+        <p id="jb-linux-hint" class="jb-hint">Linux 7.1.7 &mdash; send to a jailbroken console</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card stage">
+    <h2>Current stage</h2>
+    <p id="stage" class="stage-text">waiting for the chain</p>
+    <p class="stage-meta"><span id="stage-count">0</span> stage events this page</p>
+  </section>
+
+  <section class="card result">
+    <h2>Last result</h2>
+    <div id="result" class="result-body">no probe has completed yet</div>
+  </section>
+</main>
+
+<section class="card log-card">
+  <div class="log-head">
+    <h2>Live log</h2>
+    <div class="log-actions">
+      <button id="pause" type="button">pause</button>
+      <button id="clear" type="button">clear</button>
+    </div>
+  </div>
+  <div id="log" class="log" role="log" aria-live="polite"></div>
+</section>
+
+<script src="/sha256.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
