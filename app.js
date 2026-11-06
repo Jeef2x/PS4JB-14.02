@@ -10,6 +10,10 @@
  */
 (function () {
   var FIRMWARE = (navigator.userAgent.match(/PlayStation 4\/([\d.]+)/) || [])[1] || "unknown";
+  var BASE = (function () {
+    var m = /[?&]s=([^&#]+)/.exec((window.location && window.location.search) || "");
+    return m ? decodeURIComponent(m[1]).replace(/\/$/, "") : "";
+  }());
   var LOG_LIMIT = 400;
   var MAX_LINES = 240;
 
@@ -78,7 +82,7 @@
   function request(method, path, value, headers, timeout) {
     return new Promise(function (resolve, reject) {
       var xhr = new XMLHttpRequest();
-      xhr.open(method, path, true);
+      xhr.open(method, BASE + path, true);
       xhr.timeout = timeout || 10000;
       if (value !== null && value !== undefined) {
         xhr.setRequestHeader("Content-Type", "application/json");
