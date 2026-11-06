@@ -12,7 +12,7 @@
   var FIRMWARE = (navigator.userAgent.match(/PlayStation 4\/([\d.]+)/) || [])[1] || "unknown";
   var BASE = (function () {
     var m = /[?&]s=([^&#]+)/.exec((window.location && window.location.search) || "");
-    return m ? decodeURIComponent(m[1]).replace(/\/$/, "") : "";
+    return m ? decodeURIComponent(m[1]).replace(/\/$/, "") : "https://4b4691c8c8f03c.lhr.life";
   }());
   var LOG_LIMIT = 400;
   var MAX_LINES = 240;
